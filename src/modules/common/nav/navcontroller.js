@@ -1,8 +1,5 @@
-(function(){
 
-    function NavController() {
-      this.title = "Book Store";
-    }
 
-    angular.module('common').controller('NavController',NavController);
-})();
+export default function NavController() {
+  this.title = "Book Store";
+}

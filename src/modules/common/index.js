@@ -1,10 +1,6 @@
+import NavController from './nav/navcontroller';
 
-(function() {
+angular.module('common', []);
 
-    'use strict';
-
-    angular.module('common', []);
-
-
-})();
+angular.module('common').controller('NavController',NavController);
 
