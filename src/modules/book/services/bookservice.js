@@ -1,13 +1,27 @@
-
 export default function BookFactory($http) {
   var books;
   function getBook(id) {
     var found = books.filter((book) => book.bookID == id);
     if (found[0]) {
       return found[0]
+
+  function BookFactory($http) {
+    function getBook(id) {
+      return $http.get('http://localhost:9000/api/books/'+ id)
+               .then(function(response){
+                 return response.data;
+               });
+    }
+
+    function getBooks() {
+      return $http.get('http://localhost:9000/api/books')
+        .then(function(response){
+          return response.data;
+        });
     }
     return null;
   }
+
 
   function getBooks() {
     return $http.get('http://localhost:9000/api/books');
@@ -31,7 +45,7 @@ export default function BookFactory($http) {
     while (getBook(random) != null) {
       random = angular.random(10000);
     }
-    return random;
+     return random;
   }
 
   function getRandomIntInclusive(min, max) {

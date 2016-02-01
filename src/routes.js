@@ -1,3 +1,4 @@
+
 export default  function RouteConfig($routeProvider) {
     $routeProvider
         .when('/', {
@@ -14,4 +15,3 @@ export default  function RouteConfig($routeProvider) {
             controller: 'BookDetailsController'
         });
 }
-

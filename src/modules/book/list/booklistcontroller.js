@@ -1,11 +1,14 @@
-
-
 export default function BookListController(BookFactory) {
-      BookFactory.getBooks().then(function(response){
+    BookFactory.getBooks().then(function (response) {
         this.books = response.data;
-      }.bind(this));
+    }.bind(this));
 
-      // BookFactory.getBooks().then((response) =>{
-      //   this.books = response.data;
-      // });
-    };
+    function BookListController(BookFactory) {
+
+        BookFactory.getBooks()
+            .then(function (books) {
+                this.books = books;
+            }.bind(this));
+
+    }
+}

@@ -13,5 +13,3 @@ document.addEventListener('DOMContentLoaded',function(){
 
 angular.module('book').config(RouteConfig);
 
-
-
